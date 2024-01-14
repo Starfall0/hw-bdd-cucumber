@@ -24,10 +24,10 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   When I follow "Movie Title"
-  # your steps here
-  Then complete the rest of of this scenario
+  Given I am on the RottenPotatoes home page
+  Then I should see the following movies: Aladdin, Amelie, Chocolat, Chicken Run, 2001: A Space Odyssey, The Help, The Incredibles, Raiders of the Lost Ark, The Terminator, When Harry Met Sally
 
 Scenario: sort movies in increasing order of release date
   When I follow "Release Date"
-  # your steps here
-  Then complete the rest of of this scenario
+  Given I am on the RottenPotatoes home page
+  Then I should see the following movies: 2001: A Space Odyssey, Raiders of the Lost Ark, The Terminator, Aladdin, Chicken Run, When Harry Met Sally, Chocolat, Amelie, The Incredibles, The Help
