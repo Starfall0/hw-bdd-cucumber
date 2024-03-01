@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 class Movie < ActiveRecord::Base
   def self.all_ratings
-    ['G', 'PG', 'PG-13', 'R']
+    %w[G PG PG-13 R]
   end
+
   def self.with_ratings(ratings, sort_by)
     if ratings.nil?
       all.order sort_by
